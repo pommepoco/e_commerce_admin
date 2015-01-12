@@ -1,0 +1,23 @@
+@import "settings";
+@import "foundation";
+
+
+body {
+}
+
+#top-menu {
+	background-color: $oil;
+	color: $white;
+}
+
+#side-nav-bar {
+	background-color: $iron;
+	height: 100%;
+}
+
+.top-part-no-padding {
+	background-color: $primary-color;
+	h1 {
+		font-size: rem-calc(30);
+	}
+}

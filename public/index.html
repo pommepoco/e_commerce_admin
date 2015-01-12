@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="fr" ng-app="adminApp" >
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Administration e-commerce</title>
+	<link rel="stylesheet" href="css/app.css" />
+	<script src="bower_components/modernizr/modernizr.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/bower-angular-cookies/angular-cookies.min.js"></script>
+</head>
+<body>
+	<div class="row full-width">
+		<div class="large-12 columns content-bg">
+			<div id="top-menu">
+				<div class="row" data-equalizer>
+					<div class="large-2 medium-4 small-12 columns top-part-no-padding" data-equalizer-watch>
+						<div class="logo-bg">
+							<h1>e-commerce</h1>
+						</div>
+					</div>
+					<div class="large-10 medium-8 small-12 columns top-menu" data-equalizer-watch>
+						<div class="row">
+							<div class="large-6 medium-6 small-12 columns">
+								<div class="row">
+									<div class="large-8 columns">
+										<input id="Text1" type="text" class="search-text" placeholder="Search" />
+									</div>
+								</div>
+							</div>
+							<div class="large-4 medium-6 small-12 columns text-center">
+								<div class="row">
+									<div class="medium-3 small-3 columns">
+										<div class="notification">
+											notif
+										</div>
+									</div>
+									<div class="medium-3 small-3 columns">
+										<div class="notification">
+											messages
+										</div>
+									</div>
+									<div class="medium-3 small-3 columns">
+										{{ auth.login }}
+									</div>
+									<div class="medium-3 small-3 columns">
+										déco
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="no-padding">
+					<div class="large-2 medium-12 small-12 columns" id="side-nav-bar">
+						<ul class="side-nav">
+							<li class="active"><a href="#/dashboard"><i class="flaticon-dashboard1"></i>Dashboard</a></li>
+							<li><a href="#/utlisatueurs"><i class="flaticon-profile4"></i>Utilisateur</a></li>
+							<li><a href="#/administrateur"><i class="flaticon-businessman22"></i>Admin</a></li>
+							<li><a href="inbox.html"><span class="flaticon-mailbox10"></span>Inbox</a></li>
+							<li><a href="invoice.html"><i class="flaticon-invoice1"></i>Invoice</a></li>
+							<li>
+								<ul class="accordion" data-accordion="myAccordionGroup">
+									<li class="accordion-navigation">
+										<a href="#panel1c">Produits</a>
+										<div id="panel1c" class="content">
+											<a href="home">home</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li><a href="login.html"><i class="flaticon-incoming4"></i>Login</a></li>
+							<li><a href="register.html"><i class="flaticon-add58"></i>Register</a></li>
+							<li><a href="pricing.html"><i class="flaticon-businessman63"></i>Pricing</a></li>
+						</ul>
+					</div>
+				</div>
+				<div ng-view class="large-10 medium-12 small-12 columns light-grey-bg-pattern"></div>
+			</div>
+
+
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+	  var socket = io();
+	  socket.on('connect', function(){});
+	  socket.on('event', function(data){});
+	  socket.on('disconnect', function(){});
+	</script>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/foundation/js/foundation.min.js"></script>
+	<script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+	<script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+	<script src="app/js/app.js"></script>
+	<script src="app/js/AuthCtrl.js"></script>
+	<script src="app/js/UsersCtrl.js"></script>
+	<script src="app/js/ProductsCtrl.js"></script>
+	<script src="app/js/TransportersCtrl.js"></script>
+	<script src="js/app-foundation.js"></script>
+	<script src="js/animate.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<div id="connection">
+	<h2>Connection</h2>
+	<form ng-controller="AuthCtrl" method="post" name="connexion">
+		<input
+			name="login"
+			type="text"
+			placeholder="login"
+			ng-model="authAtempt.login"
+			required >
+			<span
+				class="error"
+				ng-show="submitted && connexion.login.$error.required">
+				Login obligatoire
+			</span>
+		<input
+			name="password"
+			type="password"
+			placeholder="mot de passe"
+			ng-model="authAtempt.password"
+			required >
+			<span
+				class="error"
+				ng-show="submitted && connexion.password.$error.required">
+				Mot de passe obligatoire
+			</span>
+			<span
+				class="error"
+				ng-show="authFail">
+				L'authentification a échoué
+			</span>
+		<button
+			type="submit"
+			ng-click="connection()" >
+				connexion
+		</button>
+	</form>
+	<div>
+    	{{ auth.logged }}
+	</div>
+</div>

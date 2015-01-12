@@ -1,0 +1,22 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'cache', 'clean', '-f' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose config Skipping project config: /Users/hugo/.npmrc. (matches userconfig)
+5 warn using --force I sure hope you know what you are doing.
+6 error Error: EACCES, unlink '/Users/hugo/.npm/block-stream/0.0.7'
+6 error  { [Error: EACCES, unlink '/Users/hugo/.npm/block-stream/0.0.7']
+6 error   errno: 3,
+6 error   code: 'EACCES',
+6 error   path: '/Users/hugo/.npm/block-stream/0.0.7' }
+7 error Please try running this command again as root/Administrator.
+8 error System Darwin 14.0.0
+9 error command "node" "/usr/local/bin/npm" "cache" "clean" "-f"
+10 error cwd /Users/hugo/wac/e_commerce_admin
+11 error node -v v0.10.33
+12 error npm -v 1.4.28
+13 error path /Users/hugo/.npm/block-stream/0.0.7
+14 error code EACCES
+15 error errno 3
+16 error stack Error: EACCES, unlink '/Users/hugo/.npm/block-stream/0.0.7'
+17 verbose exit [ 3, true ]
